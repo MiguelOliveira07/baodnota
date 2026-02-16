@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Login | Usuário </title>
+    </head>
+
+    <body>
+
+        <main>
+
+            <section class="login">
+
+                <div class="titulo">
+                    <h1> BÃO D' NOTA  </h1>
+                </div>
+
+                <div class="formulario">
+
+                <div class="subtitulo">
+                    <p> <i> login. </i></p>
+                </div>
+
+                    <form action="../actions/login_usuario.php" method="POST">
+
+                        <input type="email" name="email" placeholder="E-mail" required>
+                        <input type="password" name="senha" placeholder="Senha" required>
+
+                        <div class="botao">
+                            <button type="submit"> ACESSAR </button>
+                        </div>
+        
+                    </form>
+
+                    <a href="..pages/recuperar_senha.html"> esqueceu a senha? </a>
+                    <a href="../pages/cadastro_usuario.html"> não tem uma conta? </a>
+
+                </div>
+
+            </section>
+
+        </main>
+        
+    </body>
+
+</html>
