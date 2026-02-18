@@ -4,7 +4,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Login | Usuário </title>
+        <link rel="stylesheet" href="../style/style_login_usuario.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+        <title> Login | Cliente </title>
     </head>
 
     <body>
@@ -14,7 +16,7 @@
             <section class="login">
 
                 <div class="titulo">
-                    <h1> BÃO D' NOTA  </h1>
+                    <h1> BÃO  D' <span><i>NOTA</i></span> </h1>
                 </div>
 
                 <div class="formulario">
@@ -23,7 +25,7 @@
                     <p> <i> login. </i></p>
                 </div>
 
-                    <form action="../actions/login_usuario.php" method="POST">
+                    <form action="../actions/login_cliente.php" method="POST">
 
                         <input type="email" name="email" placeholder="E-mail" required>
                         <input type="password" name="senha" placeholder="Senha" required>
@@ -34,7 +36,7 @@
         
                     </form>
 
-                    <a href="..pages/recuperar_senha.html"> esqueceu a senha? </a>
+                    <a href=""> esqueceu a senha? </a>
                     <a href="../pages/cadastro_usuario.html"> não tem uma conta? </a>
 
                 </div>
