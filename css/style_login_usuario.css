@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+main {
+    width: 100%;
+    height: 55vh;
+}
+
+main .login {
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+main .login .titulo {
+    width: 40%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+main .login .formulario .subtitulo {
+    width: 45%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+p {
+    font-size: 0.7rem;
+}
+span {
+    color: #5603AD;
+}
+h1 {
+    color: #333333;
+}
+
+
+main .login .formulario {
+    width: 40%;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .login .formulario form {
+    width: 50%;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main .login .formulario form input {
+    width: 90%;
+    margin-top: 2px;
+}
+main .login .formulario .botao {
+    width: 50%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main .login .formulario a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 0.7rem;
+}
+main .login .formulario a:hover {
+    text-decoration: underline;
+    color:  #5603AD;
+}
