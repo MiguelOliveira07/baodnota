@@ -1,0 +1,76 @@
+﻿<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sistema de Monitoria - Monitores Subordinados</title>
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+<body>
+  <div id="app-header"></div>
+
+  <main class="page container">
+    <section class="card panel-main">
+      <header class="card-head">
+        <h1>Monitores subordinados</h1>
+        <p class="muted">Tela 7 com os monitores vinculados ao professor.</p>
+      </header>
+
+      <div class="profile-grid">
+        <aside class="profile-side">
+          <div class="avatar-block">
+            <div class="avatar-circle">
+              <span class="avatar-placeholder">Foto de perfil</span>
+              <img class="avatar-image" alt="Foto de perfil selecionada" hidden />
+            </div>
+            <label class="btn outline upload-btn">
+              Selecionar foto
+              <input class="photo-input" type="file" accept="image/*" />
+            </label>
+          </div>
+
+          <article class="card info-card">
+            <h2>Resumo do professor</h2>
+            <ul class="plain-list">
+              <li>Nome: Professor exemplo</li>
+              <li>Turmas ativas: 5</li>
+              <li>Cursos: 3</li>
+              <li>Turno de trabalho: Noite</li>
+            </ul>
+          </article>
+        </aside>
+
+        <div class="profile-content">
+          <div class="quick-actions">
+            <a class="btn outline" href="monitores.html">Consultar monitores</a>
+            <a class="btn outline" href="https://teams.microsoft.com" target="_blank" rel="noopener noreferrer">Teams</a>
+            <a class="btn outline" href="https://mg.senac.br/" target="_blank" rel="noopener noreferrer">Acessar Senac</a>
+          </div>
+
+          <article class="card panel-box">
+            <h2>Lista de monitores</h2>
+            <div class="monitor-list">
+              <article class="monitor-row">
+                <h3>Maria Araujo</h3>
+                <p>Curso: Informatica | Turno: Noite</p>
+                <p>Area: Logica e Python</p>
+              </article>
+
+              <article class="monitor-row">
+                <h3>Joao Santos</h3>
+                <p>Curso: Desenvolvimento de Sistemas | Turno: Tarde</p>
+                <p>Area: Banco de dados e SQL</p>
+              </article>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script src="JS/include.js" defer></script>
+  <script src="JS/app.js" defer></script>
+</body>
+</html>

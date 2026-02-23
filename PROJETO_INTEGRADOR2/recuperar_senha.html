@@ -1,0 +1,38 @@
+﻿<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sistema de Monitoria - Recuperar Senha</title>
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+<body class="auth-screen">
+  <div id="app-header"></div>
+
+  <main class="page container auth-page">
+    <section class="card auth-card">
+      <header class="card-head auth-head">
+        <h1>Recuperar senha</h1>
+        <p class="muted">Informe seu email para receber as instrucoes de redefinicao.</p>
+      </header>
+
+      <form class="form" action="#" method="post" autocomplete="on">
+        <label class="field">
+          <span>Email cadastrado</span>
+          <input type="email" name="email" autocomplete="email" required />
+        </label>
+
+        <div class="row auth-actions">
+          <button class="btn" type="submit">Enviar link</button>
+          <a class="btn outline" href="index.html">Voltar para login</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script src="JS/include.js" defer></script>
+  <script src="JS/app.js" defer></script>
+</body>
+</html>

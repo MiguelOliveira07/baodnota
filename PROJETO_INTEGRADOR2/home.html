@@ -1,0 +1,61 @@
+﻿<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sistema de Monitoria - Home</title>
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+<body>
+  <div id="app-header"></div>
+
+  <main class="page container">
+    <section class="card panel-main">
+      <header class="card-head">
+        <h1>Home da plataforma</h1>
+        <p class="muted">Noticias e tutoriais para alunos, monitores e professores.</p>
+      </header>
+
+      <div class="hero-layout">
+        <article class="card panel-box hero-news">
+          <h2>Galeria da turma</h2>
+          
+          <div class="home-carousel-wrap">
+            <div class="home-carousel" aria-label="Galeria de fotos da turma">
+              <figure class="home-slide">
+                <img src="assets/home/foto-1.jpg" alt="Foto da turma 1 para teste" loading="lazy" />
+              </figure>
+              <figure class="home-slide">
+                <img src="assets/home/foto-2.jpg" alt="Foto da turma 2 para teste" loading="lazy" />
+              </figure>
+              <figure class="home-slide">
+                <img src="assets/home/foto-3.jpg" alt="Foto da turma 3 para teste" loading="lazy" />
+              </figure>
+            </div>
+          </div>
+        </article>
+
+        <aside class="card panel-box hero-guides">
+          <h2>Tutoriais rapidos</h2>
+          <nav class="list compact-list">
+            <a class="list-item" href="monitores.html">Como buscar monitores</a>
+            <a class="list-item" href="usuario.html">Como ver meu painel</a>
+            <a class="list-item" href="professor.html">Como funciona a area do professor</a>
+          </nav>
+        </aside>
+      </div>
+
+      <div class="carousel-dots home-carousel-dots" aria-label="Paginacao da galeria">
+        <button class="dot is-active" type="button" data-slide="0" aria-label="Foto 1"></button>
+        <button class="dot" type="button" data-slide="1" aria-label="Foto 2"></button>
+        <button class="dot" type="button" data-slide="2" aria-label="Foto 3"></button>
+      </div>
+    </section>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script src="JS/include.js" defer></script>
+  <script src="JS/app.js" defer></script>
+</body>
+</html>

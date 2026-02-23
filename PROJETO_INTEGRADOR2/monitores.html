@@ -1,0 +1,61 @@
+﻿<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sistema de Monitoria - Monitores</title>
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+<body>
+  <div id="app-header"></div>
+
+  <main class="page container">
+    <section class="card panel-main">
+      <header class="card-head">
+        <h1>Acesso aos monitores</h1>
+        <p class="muted">Filtre por nome, turno, curso e especialidade.</p>
+      </header>
+
+      <div class="toolbar">
+        <input class="input" type="search" placeholder="Buscar por monitor, curso ou turno" />
+        <button class="btn outline" type="button">Filtrar</button>
+      </div>
+
+      <section class="card panel-box monitor-board">
+        <aside class="filter-card">
+          <h2>Opcoes de filtro</h2>
+          <ul class="plain-list">
+            <li>Nome do monitor</li>
+            <li>Turno de estudo</li>
+            <li>Curso</li>
+            <li>Especialidade</li>
+          </ul>
+        </aside>
+
+        <div class="monitor-list">
+          <article class="monitor-row">
+            <h3>Ana Souza</h3>
+            <p>Email Teams: ana.monitor@senac.br</p>
+            <p>Turno: Noite | Curso: Desenvolvimento de Sistemas</p>
+            <p>Area: Python | Professor responsavel: Carlos Lima</p>
+            <a class="link" href="monitor_detalhe.html">Ver detalhes</a>
+          </article>
+
+          <article class="monitor-row">
+            <h3>Paulo Alves</h3>
+            <p>Email Teams: paulo.monitor@senac.br</p>
+            <p>Turno: Tarde | Curso: Informatica</p>
+            <p>Area: Banco de dados | Professor responsavel: Marina Prado</p>
+            <a class="link" href="monitor_detalhe.html">Ver detalhes</a>
+          </article>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script src="JS/include.js" defer></script>
+  <script src="JS/app.js" defer></script>
+</body>
+</html>

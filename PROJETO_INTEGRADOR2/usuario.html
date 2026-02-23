@@ -1,0 +1,87 @@
+﻿<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sistema de Monitoria - Painel do Monitor</title>
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+<body>
+  <div id="app-header"></div>
+
+  <main class="page container">
+    <section class="card panel-main">
+      <header class="card-head">
+        <h1>Painel do monitor</h1>
+        <p class="muted">Visao do monitor sobre disponibilidade e agenda mensal.</p>
+      </header>
+
+      <div class="profile-grid">
+        <aside class="profile-side">
+          <div class="avatar-block">
+            <div class="avatar-circle">
+              <span class="avatar-placeholder">Foto de perfil</span>
+              <img class="avatar-image" alt="Foto de perfil selecionada" hidden />
+            </div>
+            <label class="btn outline upload-btn">
+              Selecionar foto
+              <input class="photo-input" type="file" accept="image/*" />
+            </label>
+          </div>
+
+          <article class="card info-card">
+            <h2>Informacoes</h2>
+            <form class="profile-edit-form" data-profile="monitor" action="#" method="post">
+              <label class="field">
+                <span>Nome</span>
+                <input type="text" name="nome" value="Monitor exemplo" readonly />
+              </label>
+              <label class="field">
+                <span>RA</span>
+                <input type="text" name="ra" value="2026001" readonly />
+              </label>
+              <label class="field">
+                <span>Turno</span>
+                <input type="text" name="turno" value="Noite" readonly />
+              </label>
+              <label class="field">
+                <span>Curso</span>
+                <input type="text" name="curso" value="Desenvolvimento de Sistemas" readonly />
+              </label>
+              <div class="row profile-edit-actions">
+                <button class="btn outline edit-profile-btn" type="button">Alterar informacoes</button>
+                <button class="btn save-profile-btn" type="submit" hidden>Salvar</button>
+              </div>
+            </form>
+          </article>
+        </aside>
+
+        <div class="profile-content">
+          <div class="quick-actions">
+            <button class="btn outline" type="button">Consultar monitores</button>
+            <button class="btn outline" type="button">Status de monitoria</button>
+            <a class="btn outline" href="https://teams.microsoft.com" target="_blank" rel="noopener noreferrer">Teams</a>
+            <a class="btn outline" href="https://mg.senac.br/" target="_blank" rel="noopener noreferrer">Acessar Senac</a>
+          </div>
+
+          <article class="card panel-box">
+            <h2>Monitoria atual</h2>
+            <p>Disponibilidade para monitorar condicoes em Python (if, else, elif).</p>
+            <a class="btn" href="monitor_detalhe.html">Entrar em contato</a>
+          </article>
+
+          <article class="card panel-box">
+            <h2>Calendario de aulas do mes</h2>
+            <p>Calendario de todos os cursos com opcao de filtro por curso.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script src="JS/include.js" defer></script>
+  <script src="JS/app.js" defer></script>
+</body>
+</html>
