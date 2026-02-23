@@ -16,7 +16,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -302,6 +302,9 @@ h3 {
 .hero-news,
 .hero-guides {
   min-height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-news p + p {
@@ -374,11 +377,13 @@ h3 {
 
 .compact-list .list-item {
   padding: 10px;
+
 }
 
 .list {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 10px;
 }
 
