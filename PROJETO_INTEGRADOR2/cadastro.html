@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sistema de Monitoria - Cadastro</title>
+  <title> Bão d' Nota | Cadastro</title>
   <link rel="stylesheet" href="CSS/style.css" />
 </head>
 <body class="auth-screen">
@@ -12,16 +12,12 @@
   <main class="page container auth-page">
     <section class="card auth-card">
       <header class="card-head auth-head">
-        <h1>Criar conta de aluno</h1>
+        <h1> Cadastrar-se </h1>
         <p class="muted">Preencha os campos obrigatorios para cadastro inicial.</p>
       </header>
 
       <form class="form" action="home.html" method="get" autocomplete="on">
         <div class="form-grid">
-          <label class="field">
-            <span>ID</span>
-            <input type="text" name="id" required />
-          </label>
 
           <label class="field">
             <span>RA</span>
@@ -30,35 +26,48 @@
         </div>
 
         <label class="field">
-          <span>Nome completo</span>
+          <span>NOME</span>
           <input type="text" name="nome" required />
         </label>
 
         <div class="form-grid">
           <label class="field">
-            <span>Curso</span>
-            <input type="text" name="curso" required />
+            <span>CRUSO</span>
+              <select name="curso" required>
+                <option value="" selected disabled hidden> Curso </option>
+                <option value="tec. informatica"> Téc. Informática </option>
+                <option value="tec. logistica"> Téc. Logística </option>
+                <option value="tec. seguranca do trabalho"> Téc. Segurança do Trabalho </option>
+                <option value="tec. enfermagem"> Téc. Enfermagem </option>
+                <option value="tec. administracao"> Téc. Administração </option>
+              </select>
           </label>
 
           <label class="field">
-            <span>Turma</span>
-            <input type="text" name="turma" required />
+            <span>TURMA</span>
+              <select name="turma" required>
+                <option value="" selected disabled hidden> Turma </option>
+                <option value="049"> 049 </option>
+                <option value="015"> 015 </option>
+                <option value=""> </option>
+                <option value=""></option>
+              </select>
           </label>
         </div>
 
         <label class="field">
-          <span>Email</span>
+          <span>E-MAIL</span>
           <input type="email" name="email" autocomplete="email" required />
         </label>
 
         <label class="field">
-          <span>Senha</span>
+          <span>SENHA</span>
           <input type="password" name="senha" autocomplete="new-password" required />
         </label>
 
         <div class="row auth-actions">
           <button class="btn" type="submit">Cadastrar</button>
-          <a class="btn outline" href="index.html">Voltar para login</a>
+          <a class="btn outline" href="login.html">Voltar para login</a>
         </div>
       </form>
     </section>
