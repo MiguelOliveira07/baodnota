@@ -210,7 +210,6 @@ h3 {
 }
 
 .field input,
-.field textarea,
 .input {
   border: 1px solid var(--border);
   border-radius: 10px;
