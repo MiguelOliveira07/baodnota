@@ -209,7 +209,7 @@ h3 {
   color: var(--primary-dark);
 }
 
-.field input,
+.field input, select, option
 .input {
   border: 1px solid var(--border);
   border-radius: 10px;
