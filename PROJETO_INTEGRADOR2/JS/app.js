@@ -153,24 +153,41 @@ function initPhotoUpload() {
 }
 
 function setInputsEditable(form, editable) {
-  form.querySelectorAll("input").forEach((input) => {
-    input.readOnly = !editable;
+  form.querySelectorAll("input, textarea").forEach((field) => {
+    field.readOnly = !editable;
   });
+}
+
+function setProfileEditMode(form, editing) {
+  const editBtn = form.querySelector(".edit-profile-btn");
+  const saveBtn = form.querySelector(".save-profile-btn");
+
+  setInputsEditable(form, editing);
+
+  if (editBtn) {
+    editBtn.hidden = editing;
+    editBtn.disabled = false;
+    editBtn.textContent = "Alterar informacoes";
+  }
+
+  if (saveBtn) {
+    saveBtn.hidden = !editing;
+  }
 }
 
 function fillFormFromData(form, data) {
   Object.entries(data).forEach(([name, value]) => {
-    const input = form.querySelector(`input[name="${name}"]`);
-    if (input) {
-      input.value = String(value);
+    const field = form.querySelector(`[name="${name}"]`);
+    if (field) {
+      field.value = String(value);
     }
   });
 }
 
 function readFormData(form) {
   const data = {};
-  form.querySelectorAll("input[name]").forEach((input) => {
-    data[input.name] = input.value;
+  form.querySelectorAll("input[name], textarea[name]").forEach((field) => {
+    data[field.name] = field.value;
   });
   return data;
 }
@@ -186,7 +203,6 @@ function initProfileEditForms() {
     const profileId = form.dataset.profile || "default";
     const storageKey = `${PROFILE_STORAGE_PREFIX}${profileId}`;
     const editBtn = form.querySelector(".edit-profile-btn");
-    const saveBtn = form.querySelector(".save-profile-btn");
 
     try {
       const stored = localStorage.getItem(storageKey);
@@ -197,16 +213,11 @@ function initProfileEditForms() {
       console.error("Falha ao carregar dados do perfil:", error);
     }
 
-    setInputsEditable(form, false);
+    setProfileEditMode(form, false);
 
     if (editBtn) {
       editBtn.addEventListener("click", () => {
-        setInputsEditable(form, true);
-        if (saveBtn) {
-          saveBtn.hidden = false;
-        }
-        editBtn.textContent = "Editando...";
-        editBtn.disabled = true;
+        setProfileEditMode(form, true);
       });
     }
 
@@ -219,14 +230,7 @@ function initProfileEditForms() {
         console.error("Falha ao salvar dados do perfil:", error);
       }
 
-      setInputsEditable(form, false);
-      if (saveBtn) {
-        saveBtn.hidden = true;
-      }
-      if (editBtn) {
-        editBtn.textContent = "Alterar informacoes";
-        editBtn.disabled = false;
-      }
+      setProfileEditMode(form, false);
     });
 
     form.dataset.bound = "true";

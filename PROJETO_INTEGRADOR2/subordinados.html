@@ -63,6 +63,37 @@
               </article>
             </div>
           </article>
+
+          <article class="card panel-box">
+            <h2>Gerenciar monitores</h2>
+            <p class="muted">Apenas professores logados podem promover ou remover monitor por email.</p>
+
+            <form class="form" action="api/promote_monitor.php" method="post">
+              <label class="field">
+                <span>Email do aluno para promover</span>
+                <input type="email" name="aluno_email" required />
+              </label>
+              <label class="field">
+                <span>Observacao (opcional)</span>
+                <input type="text" name="observacao" />
+              </label>
+              <button class="btn" type="submit">Promover para monitor</button>
+            </form>
+
+            <hr class="sep" />
+
+            <form class="form" action="api/demote_monitor.php" method="post">
+              <label class="field">
+                <span>Email do monitor para remover</span>
+                <input type="email" name="monitor_email" required />
+              </label>
+              <label class="field">
+                <span>Observacao (opcional)</span>
+                <input type="text" name="observacao" />
+              </label>
+              <button class="btn outline" type="submit">Remover monitor</button>
+            </form>
+          </article>
         </div>
       </div>
     </section>
