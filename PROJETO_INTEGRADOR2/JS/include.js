@@ -19,8 +19,8 @@
 
 document.addEventListener("DOMContentLoaded", async () => {
   await Promise.all([
-    loadComponent("#app-header", "components/header.html"),
-    loadComponent("#app-footer", "components/footer.html")
+    loadComponent("#app-header", "../components/header.html"),
+    loadComponent("#app-footer", "../components/footer.html")
   ]);
 
   document.dispatchEvent(new Event("components:loaded"));
