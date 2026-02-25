@@ -4,8 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
-  <title> Bão d' Nota | Professores </title>
+  <title> Bão d' Nota | Perfil do Monitor </title>
   <link rel="stylesheet" href="CSS/style.css" />
 </head>
 <body>
@@ -15,7 +14,7 @@
     <section class="card panel-main">
       <header class="card-head">
         <h1> Meu Perfil </h1>
-        <p class="muted">Acesso as requisicoes e aos monitores subordinados.</p>
+        <p class="muted">Visao do monitor sobre disponibilidade e agenda mensal.</p>
       </header>
 
       <div class="profile-grid">
@@ -32,26 +31,27 @@
           </div>
 
           <article class="card info-card">
-            <h2>Informacoes</h2>
-            <form class="profile-edit-form" data-profile="professor" action="#" method="post">
+            <h2>Informações</h2>
+            <form class="profile-edit-form" data-profile="monitor" action="#" method="post">
               <label class="field">
                 <span>Nome</span>
-                <input type="text" name="nome" value="Professor exemplo" readonly />
+                <input type="text" name="nome" value="Monitor exemplo" readonly />
+              </label>
+
+              <label class="field">
+                <span>Turno</span>
+                <input type="text" name="turno" value="Noite" readonly />
               </label>
               <label class="field">
-                <span>Turno de trabalho</span>
-                <input type="text" name="turno_trabalho" value="Noite" readonly />
+                <span>Curso</span>
+                <input type="text" name="curso" value="Desenvolvimento de Sistemas" readonly />
               </label>
               <label class="field">
-                <span>Cursos</span>
-                <input type="text" name="cursos" value="Informatica e DS" readonly />
-              </label>
-              <label class="field">
-                <span>Salas</span>
-                <input type="text" name="salas" value="Centro e Museu" readonly />
+                <span>Bio</span>
+                <textarea name="bio_local" rows="4" readonly>Monitor de Desenvolvimento de Sistemas. Atendimento no laboratório e na sala de monitoria.</textarea>
               </label>
               <div class="row profile-edit-actions">
-                <button class="btn outline edit-profile-btn" type="button">Alterar informacoes</button>
+                <button class="btn outline edit-profile-btn" type="button">Alterar informações</button>
                 <button class="btn save-profile-btn" type="submit" hidden>Salvar</button>
               </div>
             </form>
@@ -60,16 +60,19 @@
 
         <div class="profile-content">
           <div class="quick-actions">
-            <a class="btn outline" href="monitores.html">Consultar monitores</a>
-            <button class="btn outline" type="button">Acessar requisicoes</button>
-            <a class="btn outline" href="https://teams.microsoft.com" target="_blank" rel="noopener noreferrer">Teams</a>
-            <a class="btn outline" href="https://mg.senac.br/" target="_blank" rel="noopener noreferrer">Acessar Senac</a>
+            <a class="btn outline" href="https://teams.microsoft.com" target="_blank" rel="noopener noreferrer">TEAMS</a>
+            <a class="btn outline" href="https://mg.senac.br/" target="_blank" rel="noopener noreferrer">SENAC</a>
           </div>
 
           <article class="card panel-box">
-            <h2>Lista de monitores subordinados</h2>
-            <p>Visualize todos os monitores vinculados aos cursos do professor.</p>
-            <a class="btn" href="subordinados.html">Abrir lista completa</a>
+            <h2>Monitoria atual</h2>
+            <p>Disponibilidade para monitorar condicoes em Python (if, else, elif).</p>
+            <a class="btn" href="https://teams.microsoft.com">ENTRAR EM CONTATO</a>
+          </article>
+
+          <article class="card panel-box">
+            <h2>Calendario de aulas do mes</h2>
+            <p>Calendario de todos os cursos com opcao de filtro por curso.</p>
           </article>
         </div>
       </div>

@@ -1,0 +1,78 @@
+﻿<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> Bão d' Nota | Cadastro</title>
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+<body class="auth-screen">
+  <div id="app-header"></div>
+
+  <main class="page container auth-page">
+    <section class="card auth-card">
+      <header class="card-head auth-head">
+        <h1> Cadastrar-se </h1>
+        <p class="muted">Preencha os campos para se cadastrar.</p>
+      </header>
+
+      <form class="form" action="api/register.php" method="post" autocomplete="on">
+        <label class="field">
+          <span>NOME</span>
+          <input type="text" name="nome" required />
+        </label>
+
+        <div class="form-grid">
+          <label class="field">
+            <span>CURSO</span>
+              <select name="curso" required>
+                <option value="" selected disabled hidden> Curso </option>
+                <option value="tec. informatica"> Téc. Informática </option>
+                <option value="tec. logistica"> Téc. Logística </option>
+                <option value="tec. seguranca do trabalho"> Téc. Segurança do Trabalho </option>
+                <option value="tec. enfermagem"> Téc. Enfermagem </option>
+                <option value="tec. administracao"> Téc. Administração </option>
+              </select>
+          </label>
+
+          <label class="field">
+            <span>TURMA</span>
+              <select name="turma" required>
+                <option value="" selected disabled hidden> Turma </option>
+                <option value="49"> 49 </option>
+                <option value="15"> 15 </option>
+                <option value="25"> 25 </option>
+                <option value=""></option>
+              </select>
+          </label>
+        </div>
+
+        <label class="field">
+          <span>E-MAIL</span>
+          <input type="email" name="email" autocomplete="email" required />
+        </label>
+
+        <label class="field">
+          <span>SENHA</span>
+          <input type="password" name="senha" required />
+        </label>
+
+        <label class="field">
+          <span>CONFIRMAR SENHA</span>
+          <input type="password" name="confirmar_senha" required />
+        </label>
+
+        <div class="row auth-actions">
+          <button class="btn" type="submit">CADASTRAR</button>
+          <a class="btn outline" href="login.html">LOGIN</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script src="JS/include.js" defer></script>
+  <script src="JS/app.js" defer></script>
+</body>
+</html>

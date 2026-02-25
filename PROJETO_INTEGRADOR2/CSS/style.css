@@ -209,7 +209,7 @@ h3 {
   color: var(--primary-dark);
 }
 
-.field input,
+.field input, select, option
 .input {
   border: 1px solid var(--border);
   border-radius: 10px;
@@ -220,10 +220,16 @@ h3 {
 }
 
 .field input:focus,
+.field textarea:focus,
 .input:focus {
   outline: 2px solid rgba(185, 45, 210, 0.23);
   outline-offset: 1px;
   border-color: var(--primary);
+}
+
+.field textarea {
+  min-height: 88px;
+  resize: vertical;
 }
 
 .row {
@@ -262,6 +268,10 @@ h3 {
 
 .btn.outline:hover {
   background: var(--surface-muted);
+}
+
+.btn[hidden] {
+  display: none !important;
 }
 
 .link {
@@ -518,6 +528,11 @@ h3 {
 }
 
 .profile-edit-form input[readonly] {
+  background: #f9f7ff;
+  color: #4f427c;
+}
+
+.profile-edit-form textarea[readonly] {
   background: #f9f7ff;
   color: #4f427c;
 }
