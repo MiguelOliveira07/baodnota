@@ -1,4 +1,14 @@
-﻿<!doctype html>
+﻿<?php
+session_start();
+
+$erros = $_SESSION['erros'] ?? [];
+$dados = $_SESSION['dados'] ?? [];
+
+unset($_SESSION['erros']);
+unset($_SESSION['dados']);
+?>
+
+<!doctype html>
 <html lang="pt-br">
 <head>
   <meta charset="utf-8" />
@@ -16,10 +26,17 @@
         <p class="muted">Preencha os campos para se cadastrar.</p>
       </header>
 
-      <form class="form" action="api/register.php" method="post">
+      <form class="form" action="../php/cadastro.php" method="post">
         <label class="field">
           <span>NOME</span>
-          <input type="text" name="nome" required />
+          <input type="text" name="nome"
+            value="<?= $dados['nome'] ?? '' ?>"
+            class="<?= isset($erros['nome']) ? 'input-error' : '' ?>"
+            required />
+            
+          <?php if(isset($erros['nome'])): ?>
+            <small class="erro-msg"><?= $erros['nome'] ?></small>
+          <?php endif; ?>
         </label>
 
         <div class="form-grid">
@@ -49,17 +66,36 @@
 
         <label class="field">
           <span>E-MAIL</span>
-          <input type="email" name="email" autocomplete="email" required />
+          <input type="email" name="email"
+            value="<?= $dados['email'] ?? '' ?>"
+            class="<?= isset($erros['email']) ? 'input-error' : '' ?>"
+            required />
+            
+          <?php if(isset($erros['email'])): ?>
+            <small class="erro-msg"><?= $erros['email'] ?></small>
+          <?php endif; ?>
         </label>
 
         <label class="field">
           <span>SENHA</span>
-          <input type="password" name="senha" required />
+          <input type="password" name="senha"
+            class="<?= isset($erros['senha']) ? 'input-error' : '' ?>"
+            required />
+            
+          <?php if(isset($erros['senha'])): ?>
+            <small class="erro-msg"><?= $erros['senha'] ?></small>
+          <?php endif; ?>
         </label>
 
         <label class="field">
           <span>CONFIRMAR SENHA</span>
-          <input type="password" name="confirmar_senha" required />
+          <input type="password" name="confirmar_senha"
+            class="<?= isset($erros['confirmar_senha']) ? 'input-error' : '' ?>"
+            required />
+            
+          <?php if(isset($erros['confirmar_senha'])): ?>
+            <small class="erro-msg"><?= $erros['confirmar_senha'] ?></small>
+          <?php endif; ?>
         </label>
 
         <div class="row auth-actions">

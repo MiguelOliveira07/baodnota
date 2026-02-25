@@ -209,7 +209,9 @@ h3 {
   color: var(--primary-dark);
 }
 
-.field input, select, option
+.field input,
+.field select,
+.field option,
 .input {
   border: 1px solid var(--border);
   border-radius: 10px;
@@ -619,4 +621,18 @@ h3 {
   .menu {
     grid-template-columns: 1fr;
   }
+}
+
+
+
+.input-error {
+  border: 2px solid #ff4d4d !important;
+  background-color: #fff0f0;
+}
+
+.erro-msg {
+  color: #ff1a1a;
+  font-size: 0.8rem;
+  margin-top: 4px;
+  font-weight: 600;
 }
