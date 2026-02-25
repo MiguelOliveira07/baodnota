@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sistema de Monitoria - Painel do Aluno</title>
+  <title>Sistema de Monitoria - Painel do Monitor</title>
   <link rel="stylesheet" href="CSS/style.css" />
 </head>
 <body>
@@ -12,8 +12,8 @@
   <main class="page container">
     <section class="card panel-main">
       <header class="card-head">
-        <h1>Painel do aluno</h1>
-        <p class="muted">Acompanhe a monitoria desejada e o historico de atendimentos.</p>
+        <h1>Painel do monitor</h1>
+        <p class="muted">Acompanhe a disponibilidade e agenda mensal.</p>
       </header>
 
       <div class="profile-grid">
@@ -30,30 +30,27 @@
           </div>
 
           <article class="card info-card">
-            <h2>Informacoes</h2>
-            <form class="profile-edit-form" data-profile="aluno" action="#" method="post">
+            <h2>Informações</h2>
+            <form class="profile-edit-form" data-profile="monitor" action="#" method="post">
               <label class="field">
                 <span>Nome</span>
-                <input type="text" name="nome" value="Aluno exemplo" readonly />
+                <input type="text" name="nome" value="Monitor exemplo" readonly />
               </label>
+
               <label class="field">
-                <span>RA</span>
-                <input type="text" name="ra" value="2026123" readonly />
+                <span>Turno</span>
+                <input type="text" name="turno" value="Noite" readonly />
               </label>
               <label class="field">
                 <span>Curso</span>
                 <input type="text" name="curso" value="Desenvolvimento de Sistemas" readonly />
               </label>
               <label class="field">
-                <span>Turma</span>
-                <input type="text" name="turma" value="T01" readonly />
-              </label>
-              <label class="field">
-                <span>Bio / Local</span>
-                <textarea name="bio_local" rows="4" readonly>Aluno de Desenvolvimento de Sistemas. Disponivel para atendimento na biblioteca e em salas de estudo.</textarea>
+                <span>Bio</span>
+                <textarea name="bio_local" rows="4" readonly>Monitor de Desenvolvimento de Sistemas. Atendimento no laboratório e na sala de monitoria.</textarea>
               </label>
               <div class="row profile-edit-actions">
-                <button class="btn outline edit-profile-btn" type="button">Alterar informacoes</button>
+                <button class="btn outline edit-profile-btn" type="button">Alterar informações</button>
                 <button class="btn save-profile-btn" type="submit" hidden>Salvar</button>
               </div>
             </form>
@@ -62,21 +59,19 @@
 
         <div class="profile-content">
           <div class="quick-actions">
-            <button class="btn outline" type="button">Consultar monitores</button>
-            <button class="btn outline" type="button">Status de monitoria</button>
-            <a class="btn outline" href="https://teams.microsoft.com" target="_blank" rel="noopener noreferrer">Teams</a>
-            <a class="btn outline" href="https://mg.senac.br/" target="_blank" rel="noopener noreferrer">Acessar Senac</a>
+            <a class="btn outline" href="https://teams.microsoft.com" target="_blank" rel="noopener noreferrer">TEAMS</a>
+            <a class="btn outline" href="https://mg.senac.br/" target="_blank" rel="noopener noreferrer">SENAC</a>
           </div>
 
-          <article class="card panel-box feature-box">
-            <h2>Monitoria desejada</h2>
-            <p>Condicoes em Python (if, else, elif).</p>
-            <a class="btn" href="monitores.html">Entrar em contato</a>
+          <article class="card panel-box">
+            <h2>Monitoria atual</h2>
+            <p>Disponibilidade para monitorar condicoes em Python (if, else, elif).</p>
+            <a class="btn" href="https://teams.microsoft.com">ENTRAR EM CONTATO</a>
           </article>
 
           <article class="card panel-box">
-            <h2>Historico de monitorias</h2>
-            <p>Linha do tempo das monitorias realizadas pelo aluno.</p>
+            <h2>Calendario de aulas do mes</h2>
+            <p>Calendario de todos os cursos com opcao de filtro por curso.</p>
           </article>
         </div>
       </div>

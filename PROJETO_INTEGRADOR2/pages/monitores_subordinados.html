@@ -13,7 +13,7 @@
     <section class="card panel-main">
       <header class="card-head">
         <h1>Monitores subordinados</h1>
-        <p class="muted">Tela 7 com os monitores vinculados ao professor.</p>
+        <p class="muted">Esses são os monitores vinculados a você.</p>
       </header>
 
       <div class="profile-grid">
@@ -42,56 +42,55 @@
 
         <div class="profile-content">
           <div class="quick-actions">
-            <a class="btn outline" href="monitores.html">Consultar monitores</a>
-            <a class="btn outline" href="https://teams.microsoft.com" target="_blank" rel="noopener noreferrer">Teams</a>
-            <a class="btn outline" href="https://mg.senac.br/" target="_blank" rel="noopener noreferrer">Acessar Senac</a>
+            <a class="btn outline" href="https://teams.microsoft.com" target="_blank" rel="noopener noreferrer">TEAMS</a>
+            <a class="btn outline" href="https://mg.senac.br/" target="_blank" rel="noopener noreferrer">SENAC</a>
           </div>
 
           <article class="card panel-box">
             <h2>Lista de monitores</h2>
             <div class="monitor-list">
               <article class="monitor-row">
-                <h3>Maria Araujo</h3>
-                <p>Curso: Informatica | Turno: Noite</p>
-                <p>Area: Logica e Python</p>
+                <h3>Maria Araújo</h3>
+                <p>Curso: Informática | Turno: Noite</p>
+                <p>Aréa: Lógica e Python</p>
               </article>
 
               <article class="monitor-row">
-                <h3>Joao Santos</h3>
+                <h3>João Santos</h3>
                 <p>Curso: Desenvolvimento de Sistemas | Turno: Tarde</p>
-                <p>Area: Banco de dados e SQL</p>
+                <p>Aréa: Banco de dados e SQL</p>
               </article>
             </div>
           </article>
 
           <article class="card panel-box">
-            <h2>Gerenciar monitores</h2>
-            <p class="muted">Apenas professores logados podem promover ou remover monitor por email.</p>
+            <h2>Promover e Despromover Monitores</h2>
+            <p class="muted">Torne alunos em montores e/ou Remova o ststaus de monitor de alunos.</p>
 
             <form class="form" action="api/promote_monitor.php" method="post">
               <label class="field">
-                <span>Email do aluno para promover</span>
+                <span>E-mail do aluno</span>
                 <input type="email" name="aluno_email" required />
               </label>
               <label class="field">
-                <span>Observacao (opcional)</span>
+                <span>Observação (opcional)</span>
                 <input type="text" name="observacao" />
               </label>
-              <button class="btn" type="submit">Promover para monitor</button>
+              <button class="btn" type="submit">PROMOVER</button>
             </form>
 
             <hr class="sep" />
 
             <form class="form" action="api/demote_monitor.php" method="post">
               <label class="field">
-                <span>Email do monitor para remover</span>
+                <span>E-mail do monitor </span>
                 <input type="email" name="monitor_email" required />
               </label>
               <label class="field">
-                <span>Observacao (opcional)</span>
+                <span>Observação (opcional)</span>
                 <input type="text" name="observacao" />
               </label>
-              <button class="btn outline" type="submit">Remover monitor</button>
+              <button class="btn" type="submit">DESPROMOVER</button>
             </form>
           </article>
         </div>
