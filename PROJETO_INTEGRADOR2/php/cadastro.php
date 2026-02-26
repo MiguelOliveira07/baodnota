@@ -16,9 +16,7 @@ $cd_turma = $_POST['turma'] ?? '';
 $dados['nome'] = $nome;
 $dados['email'] = $email;
 
-/* =========================
-   VALIDAÇÕES
-========================= */
+// validações
 
 if (!validarNome($nome)) {
     $erros['nome'] = "Nome inválido.";
@@ -36,9 +34,7 @@ if ($senha !== $confirmar) {
     $erros['confirmar_senha'] = "As senhas não coincidem.";
 }
 
-/* =========================
-   VERIFICAR EMAIL NO BANCO
-========================= */
+// verificar e-mail no banco
 
 if (empty($erros)) {
 
@@ -51,9 +47,7 @@ if (empty($erros)) {
 }
 
 
-/* =========================
-   SE TIVER ERRO → VOLTA
-========================= */
+// cadastrar no banco
 
 if (!empty($erros)) {
     $_SESSION['erros'] = $erros;
@@ -62,9 +56,7 @@ if (!empty($erros)) {
     exit;
 }
 
-/* =========================
-   CADASTRAR NO BANCO
-========================= */
+// cadastrar no banco
 
 $senhaHash = gerarTokenSenha($senha);
 
@@ -81,9 +73,7 @@ $stmt->execute([
     $cd_turma
 ]);
 
-/* =========================
-   REDIRECIONAR
-========================= */
+//redirecionar para a home
 
 header("Location: ../pages/home.html");
 exit;

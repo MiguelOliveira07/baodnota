@@ -29,7 +29,6 @@ unset($_SESSION['dados']);
 
       <form class="form" action="../php/login.php" method="post">
 
-        <!-- EMAIL -->
         <label class="field">
           <span>EMAIL</span>
           <input 
@@ -43,8 +42,7 @@ unset($_SESSION['dados']);
             <small class="erro-msg"><?= $erros['email'] ?></small>
           <?php endif; ?>
         </label>
-
-        <!-- SENHA -->
+        
         <label class="field">
           <span>SENHA</span>
           <input 

@@ -1,0 +1,86 @@
+﻿<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+  <title> Bão d' Nota | Professores </title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div id="app-header"></div>
+
+  <main class="page container">
+    <section class="card panel-main">
+      <header class="card-head">
+        <h1> Meu Perfil </h1>
+        <p class="muted">Acesso as requisicoes e aos monitores subordinados.</p>
+      </header>
+
+      <div class="profile-grid">
+        <aside class="profile-side">
+          <div class="avatar-block">
+            <div class="avatar-circle">
+              <span class="avatar-placeholder">Foto de perfil</span>
+              <img class="avatar-image" alt="Foto de perfil selecionada" hidden />
+            </div>
+            <label class="btn outline upload-btn">
+              Selecionar foto
+              <input class="photo-input" type="file" accept="image/*" />
+            </label>
+          </div>
+
+          <article class="card info-card">
+            <h2>Informacoes</h2>
+            <form class="profile-edit-form" data-profile="professor" action="#" method="post">
+              <label class="field">
+                <span>Nome</span>
+                <input type="text" name="nome" value="Professor exemplo" readonly />
+              </label>
+              <label class="field">
+                <span>Turno de trabalho</span>
+                <input type="text" name="turno_trabalho" value="Noite" readonly />
+              </label>
+              <label class="field">
+                <span>Cursos</span>
+                <input type="text" name="cursos" value="Informatica e DS" readonly />
+              </label>
+              <label class="field">
+                <span>Salas</span>
+                <input type="text" name="salas" value="Centro e Museu" readonly />
+              </label>
+              <label class="field">
+                <span>Bio</span>
+                <textarea name="bio_local" rows="4" readonly>Professor de Desenvolvimento de Sistemas. Atendimento em laboratório, biblioteca e salas de monitoria.</textarea>
+              </label>
+              <div class="row profile-edit-actions">
+                <button class="btn outline edit-profile-btn" type="button">Alterar informações</button>
+                <button class="btn save-profile-btn" type="submit" hidden>Salvar</button>
+              </div>
+            </form>
+          </article>
+        </aside>
+
+        <div class="profile-content">
+          <div class="quick-actions">
+            <a class="btn outline" href="https://teams.microsoft.com" target="_blank" rel="noopener noreferrer">TEAMS</a>
+            <a class="btn outline" href="https://mg.senac.br/" target="_blank" rel="noopener noreferrer">SENAC</a>
+          </div>
+
+          <article class="card panel-box">
+            <h2>Lista de monitores subordinados</h2>
+            <p>Visualize todos os monitores vinculados aos cursos do professor.</p>
+            <a class="btn" href="../pages/monitores_subordinados.html">Abrir lista completa</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script src="../js/include.js" defer></script>
+  <script src="../js/app.js" defer></script>
+</body>
+</html>
