@@ -1,5 +1,11 @@
 <?php
 session_start();
+
+$stmt = $pdo->prepare("SELECT cd_prof FROM professores WHERE id_usuario = ?");
+$stmt->execute([$usuario['id_usuario']]);
+$professor = $stmt->fetch();
+
+$_SESSION['is_professor'] = $professor ? true : false;
 require_once 'conexao.php';
 
 $erros = [];
