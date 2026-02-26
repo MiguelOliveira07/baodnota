@@ -1,6 +1,16 @@
 ﻿<?php
 session_start();
 
+require_once '../php/conexao.php';
+
+/* Buscar cursos */
+$stmt = $pdo->query("SELECT cd_curso, nome FROM cursos ORDER BY nome");
+$cursos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+/* Buscar turmas */
+$stmt = $pdo->query("SELECT cd_turma, numero_turma, cd_curso FROM turmas");
+$turmas = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 $erros = $_SESSION['erros'] ?? [];
 $dados = $_SESSION['dados'] ?? [];
 
@@ -42,25 +52,30 @@ unset($_SESSION['dados']);
         <div class="form-grid">
           <label class="field">
             <span>CURSO</span>
-              <select name="curso" required>
-                <option value="" selected disabled hidden> Curso </option>
-                <option value="tec. informatica"> Téc. Informática </option>
-                <option value="tec. logistica"> Téc. Logística </option>
-                <option value="tec. seguranca do trabalho"> Téc. Segurança do Trabalho </option>
-                <option value="tec. enfermagem"> Téc. Enfermagem </option>
-                <option value="tec. administracao"> Téc. Administração </option>
-              </select>
+            <select name="curso" required>
+              <option value="" disabled selected>Selecione o curso</option>
+
+              <?php foreach ($cursos as $curso): ?>
+                <option value="<?= $curso['cd_curso'] ?>">
+                  <?= $curso['nome'] ?>
+                </option>
+              <?php endforeach; ?>
+
+            </select>
           </label>
 
           <label class="field">
             <span>TURMA</span>
-              <select name="turma" required>
-                <option value="" selected disabled hidden> Turma </option>
-                <option value="49"> 49 </option>
-                <option value="15"> 15 </option>
-                <option value="25"> 25 </option>
-                <option value=""></option>
-              </select>
+            <select name="turma" required>
+              <option value="" disabled selected>Selecione a turma</option>
+
+              <?php foreach ($turmas as $turma): ?>
+                <option value="<?= $turma['cd_turma'] ?>">
+                  <?= $turma['numero_turma'] ?>
+                </option>
+              <?php endforeach; ?>
+
+            </select>
           </label>
         </div>
 
@@ -100,7 +115,7 @@ unset($_SESSION['dados']);
 
         <div class="row auth-actions">
           <button class="btn" type="submit">CADASTRAR</button>
-          <a class="btn outline" href="../pages/login.html">LOGIN</a>
+          <a class="btn outline" href="../pages/login.php">LOGIN</a>
         </div>
       </form>
     </section>

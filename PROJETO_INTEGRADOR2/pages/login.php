@@ -1,4 +1,14 @@
-﻿<!doctype html>
+﻿<?php
+session_start();
+
+$erros = $_SESSION['erros'] ?? [];
+$dados = $_SESSION['dados'] ?? [];
+
+unset($_SESSION['erros']);
+unset($_SESSION['dados']);
+?>
+
+<!doctype html>
 <html lang="pt-br">
 <head>
   <meta charset="utf-8" />
@@ -17,26 +27,47 @@
         <p class="muted">Bem-vindo(a) ao Bão d' Nota!</p>
       </header>
 
-      <form class="form" action="api/login.php" method="post">
+      <form class="form" action="../php/login.php" method="post">
+
+        <!-- EMAIL -->
         <label class="field">
           <span>EMAIL</span>
-          <input type="text" name="email"required />
+          <input 
+            type="email" 
+            name="email"
+            value="<?= $dados['email'] ?? '' ?>"
+            class="<?= isset($erros['email']) ? 'input-error' : '' ?>"
+            required />
+
+          <?php if(isset($erros['email'])): ?>
+            <small class="erro-msg"><?= $erros['email'] ?></small>
+          <?php endif; ?>
         </label>
 
+        <!-- SENHA -->
         <label class="field">
           <span>SENHA</span>
-          <input type="password" name="senha" required />
+          <input 
+            type="password" 
+            name="senha"
+            class="<?= isset($erros['senha']) ? 'input-error' : '' ?>"
+            required />
+
+          <?php if(isset($erros['senha'])): ?>
+            <small class="erro-msg"><?= $erros['senha'] ?></small>
+          <?php endif; ?>
         </label>
 
         <div class="row auth-actions">
           <button class="btn" type="submit">ENTRAR</button>
-          <a class="link" href="recuperar_senha.html">ESQUECI MINHA SENHA</a>
+          <a class="link" href="../pages/recuperar_senha.html">ESQUECI MINHA SENHA</a>
         </div>
 
         <hr class="sep" />
 
         <p class="muted">Não é cadastrado no Bão d' Nota?</p>
-        <a class="btn outline" href="cadastro.html">Criar cadastro</a>
+        <a class="btn outline" href="cadastro.php">Criar cadastro</a>
+
       </form>
     </section>
   </main>
