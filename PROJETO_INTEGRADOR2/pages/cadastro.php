@@ -24,6 +24,8 @@ unset($_SESSION['dados']);
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title> Bão d' Nota | Cadastro</title>
+  <link rel="shortcut icon" href="../imgs/logo_baodnota.jpeg" type="image/x-icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body class="auth-screen">
