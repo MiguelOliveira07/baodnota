@@ -27,7 +27,7 @@ if (!validarEmail($email)) {
 }
 
 if (!validarSenha($senha)) {
-    $erros['senha'] = "Senha deve conter maiúscula, minúscula, número e caractere especial.";
+    $erros['senha'] = "Senha deve conter maiúscula, minúscula, número, caractere especial e possuir no mínimo 8 caracteres.";
 }
 
 if ($senha !== $confirmar) {

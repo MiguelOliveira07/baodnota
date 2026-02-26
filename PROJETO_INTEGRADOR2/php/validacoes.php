@@ -30,12 +30,13 @@ function validarEmail($email) {
 //validando senha
 function validarSenha($senha) {
 
+    $temTamanho   = strlen($senha) >= 8;
     $temMaiuscula = preg_match('/[A-Z]/', $senha);
     $temMinuscula = preg_match('/[a-z]/', $senha);
     $temNumero    = preg_match('/[0-9]/', $senha);
     $temEspecial  = preg_match('/[\W]/', $senha);
 
-    if ($temMaiuscula && $temMinuscula && $temNumero && $temEspecial) {
+    if ($temTamanho && $temMaiuscula && $temMinuscula && $temNumero && $temEspecial) {
         return true;
     }
 
