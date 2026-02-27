@@ -38,7 +38,10 @@ if (empty($erros)) {
 if (!empty($erros)) {
     $_SESSION['erros'] = $erros;
     $_SESSION['dados'] = $dados;
-    header("Location: ../pages/home.html");
+    header("Location: ../pages/login.php");
+    exit;
+} else {
+    header("Location: ../pages/painel_aluno.html");
     exit;
 }
 
